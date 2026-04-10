@@ -274,15 +274,11 @@ main {
     box-shadow: 5px 10px 10px -10px rgba(14, 14, 14, 0.5);
   }
 
-  .share-left {
-    justify-content: space-around;
-    gap: 2rem;
-  }
-  .share-btn-wrapper .share-btn {
+  .share-btn[aria-expanded="true"] {
     background-color: var(--grey-500);
   }
 
-  .share-btn-wrapper .share-btn img {
+  .share-btn[aria-expanded="true"] img {
     filter: brightness(0) invert(1);
   }
 }
