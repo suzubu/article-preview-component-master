@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/suzubu/article-preview-component-master)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://suzubu.github.io/article-preview-component-master/)
 
 ## My process
 
