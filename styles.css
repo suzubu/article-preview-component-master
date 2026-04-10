@@ -26,6 +26,11 @@
   --spacing-800: 4rem;
   --spacing-1300: 6.5rem;
   --spacing-2000: 10rem;
+
+  /* Card widths */
+  --max-width-card-mobile: 375px;
+  --max-width-card-tablet: 650px;
+  --max-width-card-desktop: 750px;
 }
 
 /* Reset */
@@ -38,6 +43,9 @@
 [hidden] {
   display: none !important;
 }
+/* .is-hidden {
+  display: none;
+} */
 
 /* Base Styles */
 html {
@@ -97,7 +105,7 @@ main {
   border-radius: 16px;
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
   min-width: 320px;
-  max-width: 375px;
+  max-width: var(--max-width-card-mobile);
   width: 100%;
   overflow: hidden;
 }
@@ -218,11 +226,11 @@ main {
   filter: brightness(0) invert(1);
 }
 
-@media (min-width: 650px) {
+@media (min-width: 40.625rem) {
   .card {
     display: flex;
     flex-direction: row;
-    max-width: 650px;
+    max-width: var(--max-width-card-tablet);
     overflow: visible;
   }
 
@@ -260,7 +268,8 @@ main {
   }
 
   .contact {
-    padding: 0 2.5rem 2rem 2.5rem;
+    padding: var(--spacing-0) var(--spacing-500) var(--spacing-400)
+      var(--spacing-500);
   }
 
   .share-btn-wrapper {
@@ -274,7 +283,7 @@ main {
   .share-menu {
     inset: unset;
     position: absolute;
-    bottom: calc(100% + 2.5rem);
+    bottom: calc(100% + var(--spacing-500));
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -296,9 +305,9 @@ main {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
   .card {
-    max-width: 750px;
+    max-width: var(--max-width-card-desktop);
   }
 
   h1 {
