@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repo](https://your-solution-url.com)
+- Solution URL: [Repo](https://github.com/suzubu/article-preview-component-master)
 - Live Site URL: [Live Site](https://your-live-site-url.com)
 
 ## My process
