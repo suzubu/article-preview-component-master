@@ -15,13 +15,17 @@ function closeMenu() {
   shareBtn.focus();
 }
 
-shareBtn.addEventListener("click", () => {
-  if (shareMenu.hidden) openMenu();
-  else closeMenu();
-});
+if (shareBtn && shareMenu) {
+  shareBtn.addEventListener("click", () => {
+    if (shareMenu.hidden) openMenu();
+    else closeMenu();
+  });
 
-closeBtn.addEventListener("click", closeMenu);
+  shareMenu.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+}
 
-shareMenu.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeMenu();
-});
+if (closeBtn && shareMenu) {
+  closeBtn.addEventListener("click", closeMenu);
+}
