@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -16,22 +15,19 @@
 <body>
   <main>
     <article class="card">
-      <div class="hero-img-wrapper">
+      <figure class="hero-img-wrapper">
         <img class="hero-img"
              src="images/drawers.jpg"
              alt="green chest of drawers with picture frame and vase of flowers set against a white brick wall">
-      </div>
+        <figcaption>Styled drawers in a minimalist living room</figcaption>
+      </figure>
       <div class="card-body">
         <div class="content">
           <h1 class="tx-preset-1">Shift the overall look and feel by adding
-            these
-            wonderful
-            touches to furniture in your home</h1>
+            these wonderful touches to furniture in your home</h1>
           <p class="tx-preset-2-md">Ever been in a room and felt like something
-            was
-            missing? Perhaps
-            it felt slightly bare and uninviting. I’ve got some simple tips
-            to help you make any room feel complete.</p>
+            was missing? Perhaps it felt slightly bare and uninviting. I've got
+            some simple tips to help you make any room feel complete.</p>
         </div>
         <footer class="contact">
           <div class="contact-author">
@@ -40,12 +36,16 @@
                  alt="Michelle Appleton">
             <div class="contact-info">
               <p class="tx-preset-2-bold">Michelle Appleton</p>
-              <p class="tx-preset-2-md">28 Jun 2020</p>
+              <p class="tx-preset-2-md">
+                <time datetime="2020-06-28">28 Jun 2020</time>
+              
+              </p>
             </div>
           </div>
 
           <div class="share-btn-wrapper">
-            <button class="share-btn"
+            <button type="button"
+                    class="share-btn"
                     aria-label="Share article"
                     aria-expanded="false"
                     aria-controls="share-menu">
@@ -61,34 +61,43 @@
                  hidden>
               <div class="share-left">
                 <p class="tx-preset-3">SHARE</p>
-                <div class="share-icons">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     aria-label="Share on Facebook (opens in new tab)">
-                    <img src="images/icon-facebook.svg"
-                         alt=""
-                         aria-hidden="true">
-                  </a>
-                  <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com&text=Shift the overall look and feel"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     aria-label="Share on Twitter (opens in new tab)">
-                    <img src="images/icon-twitter.svg"
-                         alt=""
-                         aria-hidden="true">
-                  </a>
-                  <a href="https://pinterest.com/pin/create/button/?url=https://yourwebsite.com"
-                     rel="noopener noreferrer"
-                     target="_blank"
-                     aria-label="Share on Pinterest (opens in new tab)">
-                    <img src="images/icon-pinterest.svg"
-                         alt=""
-                         aria-hidden="true">
-                  </a>
-                </div>
+                <nav aria-label="Share this article">
+                  <ul class="share-icons">
+                    <li>
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="Share on Facebook (opens in new tab)">
+                        <img src="images/icon-facebook.svg"
+                             alt=""
+                             aria-hidden="true">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com&text=Shift the overall look and feel"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="Share on Twitter (opens in new tab)">
+                        <img src="images/icon-twitter.svg"
+                             alt=""
+                             aria-hidden="true">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://pinterest.com/pin/create/button/?url=https://yourwebsite.com"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="Share on Pinterest (opens in new tab)">
+                        <img src="images/icon-pinterest.svg"
+                             alt=""
+                             aria-hidden="true">
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <button class="share-btn"
+              <button type="button"
+                      class="share-btn"
                       aria-label="Close share menu"
                       aria-expanded="false"
                       aria-controls="share-menu">
@@ -102,7 +111,6 @@
       </div>
     </article>
   </main>
-
 
   <script type="module"
           src="main.js"></script>
