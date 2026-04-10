@@ -1,14 +1,27 @@
-const shareBtns = document.querySelectorAll(".share-btn-wrapper .share-btn");
+const shareBtn = document.querySelector(".share-btn-wrapper > .share-btn");
 const shareMenu = document.querySelector("#share-menu");
-const shareUrl = encodeURIComponent("https://yourwebsite.com");
-const shareTitle = encodeURIComponent(
-  "Shift the overall look and feel by adding these wonderful touches to furniture in your home",
-);
+const closeBtn = document.querySelector(".share-menu .share-btn");
 
-shareBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const isOpen = !shareMenu.hidden;
-    shareMenu.hidden = isOpen;
-    shareBtns.forEach((b) => b.setAttribute("aria-expanded", String(!isOpen)));
-  });
+function openMenu() {
+  shareMenu.hidden = false;
+  shareBtn.setAttribute("aria-expanded", "true");
+  const firstFocusable = shareMenu.querySelector("a, button");
+  (firstFocusable || shareMenu).focus();
+}
+
+function closeMenu() {
+  shareMenu.hidden = true;
+  shareBtn.setAttribute("aria-expanded", "false");
+  shareBtn.focus();
+}
+
+shareBtn.addEventListener("click", () => {
+  if (shareMenu.hidden) openMenu();
+  else closeMenu();
+});
+
+closeBtn.addEventListener("click", closeMenu);
+
+shareMenu.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
 });
