@@ -43,9 +43,6 @@
 [hidden] {
   display: none !important;
 }
-/* .is-hidden {
-  display: none;
-} */
 
 /* Base Styles */
 html {
@@ -63,7 +60,7 @@ body {
   font-size: var(--font-size-preset-1);
   font-weight: var(--font-weight-bold);
   line-height: 1.3;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0125em;
   color: var(--grey-900);
 }
 
@@ -71,7 +68,7 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
   line-height: 1.4;
-  letter-spacing: 0.12px;
+  letter-spacing: 0.0075em;
   color: var(--grey-900);
 }
 
@@ -79,7 +76,7 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   line-height: 1.4;
-  letter-spacing: 0.12px;
+  letter-spacing: 0.0075em;
   color: var(--grey-500);
 }
 
